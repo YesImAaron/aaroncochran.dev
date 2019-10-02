@@ -12,13 +12,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat:300&display=swap">
   </head>
   <body>
-    {{ partial "header" . }}
+    {{ block "main" . }}
 
-      {{ block "main" . }}
-
-      {{ end }}
-
-    {{ partial "footer" . }}
-  <script async src="{{ "/js/scripts.min.js" | relURL }}" type="text/javascript"></script>
+    {{ end }}
+    <script async src="{{ "/js/scripts.min.js" | relURL }}" type="text/javascript"></script>
   </body>
 </html>
