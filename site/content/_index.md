@@ -1,5 +1,4 @@
 ---
-title: Homepage
+title: Home
 
 ---
-WHOAaaa

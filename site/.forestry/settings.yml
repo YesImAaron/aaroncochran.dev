@@ -20,17 +20,12 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":year:/:month:/:day:/:filename:"
 build:
-  preview_command: npm run preview
-  publish_command: npm run build
   preview_env:
   - HUGO_ENV=staging
   - HUGO_VERSION=0.54.0
-  publish_env:
-  - HUGO_ENV=production
-  - HUGO_VERSION=0.54.0
-  - baseurl=https://yesimaaron.github.io/let-us-be-your-lungs-dev/
   preview_output_directory: dist
-  output_directory: dist
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
   instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
     -d public
 version: 0.54.0
