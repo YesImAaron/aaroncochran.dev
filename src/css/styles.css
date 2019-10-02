@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-gray-700 font-sans;
+}
+
+.bg-mountain {
+  background-image: url('../img/mountains.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+}
+
+.columns {
+  column-count: 1;
+}
+
+.columns > * {
+  break-inside: avoid;
+}
+
+a {
+  transition: color 0.25s linear;
+}
+
+@screen md {
+  .columns {
+    column-count: 2;
+  }
+}
+
+::selection {
+  text-shadow: none;
+  @apply text-gray-100;
+  @apply bg-gray-700;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  @apply text-gray-100;
+  @apply bg-gray-700;
+}
+
+@tailwind utilities;

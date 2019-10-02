@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.Language.Lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="{{ $.Site.BaseURL }}">
+    <title>{{ if .Page.Title }}{{ .Page.Title }} - {{ end }}{{ .Site.Title }}</title>
+    <meta name="author" content="{{ $.Param "author" }}">
+    <meta name="description" content="{{ $.Param "description" }}">
+    <link rel="stylesheet" href="{{ "css/styles.min.css" | relURL }}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat:300&display=swap">
+  </head>
+  <body>
+    {{ partial "header" . }}
+
+      {{ block "main" . }}
+
+      {{ end }}
+
+    {{ partial "footer" . }}
+  <script async src="{{ "/js/scripts.min.js" | relURL }}" type="text/javascript"></script>
+  </body>
+</html>
